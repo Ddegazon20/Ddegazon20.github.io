@@ -1,1 +1,2 @@
 # Ddegazon20.github.io
+This twine story will be a follow your interest story as you will be able to explore different points in Tudor history as the six monarchs of Tudor England will be included; these six monarchs are Henry VII, Henry VIII, Edward VI, Jane Grey, Mary I, and Elizabeth I; with each monarch having their own passage and sub passages with other important figures in Tudor history. This story will include the use of multimedia, colors, conditionals, variables, and user input to enhance the overall entertainment and functionality of the story. 
