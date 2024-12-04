@@ -9,56 +9,78 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play index.</tw-noscript></noscript></tw-story>
-<tw-storydata name="index" startnode="1" creator="Twine" creator-version="2.9.2" format="Harlowe" format-version="3.3.9" ifid="18A96FD2-DC3D-45C9-8014-2C42436A0611" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Welcome " tags="" position="675,275" size="100,100">Welcome to Tudor History!!! An era that lasted from 1485 through 1603. Here you will be able to follow your own interest as you will be able to click through some of the most influential and historical figures in Tudor History. There were a total of 6 monarchs in this period of history. Each with their own story and contribution to history. Here we will be able to look through those stories together while also exploring their era and other significant figures. 
+<tw-storydata name="index" startnode="1" creator="Twine" creator-version="2.10.0" format="Harlowe" format-version="3.3.9" ifid="18A96FD2-DC3D-45C9-8014-2C42436A0611" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Welcome " tags="" position="675,275" size="100,100">(enchant:?page,(bg:#610a61))Welcome to Tudor History!!! An era that lasted from 1485 through 1603. Here you will be able to follow your own interest as you will be able to click through some of the most influential and historical figures in Tudor History. There were a total of 6 monarchs in this period of history. Each with their own story and contribution to history. Here we will be able to look through those stories together while also exploring their era and other significant figures. 
 
 You are a time-traveler now stuck exploring different points of the Tudor Era, you can go chronically between each monarch or pick your own sequence, all the power rests in your hands. 
 
+Please enter your name (input:bind $name2)
+
 So, Where shall we begin? 
 
-[[Henry VII]] 
-[[Henry VIII]] 
-[[Edward VI]] 
-[[Jane Grey]] 
-[[Mary I]]
-[[Elizabeth I]] 
-[[Bibliography]]</tw-passagedata><tw-passagedata pid="2" name="Henry VII" tags="" position="675,400" size="100,100">King Henry VII was born on January 28, 1457 in Pembroke Castle, Pembrokeshire, Wales. He is known for being the first monarch of the Tudor period. He became king of England after ending the War of Roses which was fought between the Lancaster and York houses.
+(after:1s)[[[Henry VII]]] 
+(after:2s)[[[Henry VIII]] ]
+(after:3s)[[[Edward VI]] ]
+(after:4s)[[[Jane Grey]] ]
+(after:5s)[[[Mary I]]]
+(after:6s)[[[Elizabeth I]] ]
+(after:7s)[[[Bibliography]]]</tw-passagedata><tw-passagedata pid="2" name="Henry VII" tags="" position="675,400" size="100,100">(enchant:?page,(bg:green))(text-colour:orange)[King Henry VII was born on January 28, 1457 in Pembroke Castle, Pembrokeshire, Wales. He is known for being the first monarch of the Tudor period. He became king of England after ending the War of Roses which was fought between the Lancaster and York houses.
+(after:2s)[
+Henry had many accomplishments while being king, but arguably his greatest accomplishment (other than the War of Roses), would be him marrying [[Elizabeth of York]] who was the daughter of [[King Edward IV]], which would lead to the houses of York and Lanchaster uniting.]
+(after:3s)[
+Henry VII would pass away on April 21, 1509 and would be succeded by his son, [[Henry VIII]] [[(Britannica)|Bibliography]].]]
 
-Henry had many accomplishments while being king, but arguably his greatest accomplishment (other than the War of Roses), would be him marrying [[Elizabeth of York]] who was the daughter of King Edward IV, which would lead to the houses of York and Lanchaster uniting.
+(text-colour:orange)[(text-colour:orange)[Who did Henry VII marry?] (dropdown:bind $name3, &quot;Elizabeth I&quot;, &quot;Catherine of Aragon&quot;, &quot;Elizabeth of York&quot;, &quot;Mary I&quot;) ]
 
-Henry VII would pass away on April 21, 1509 and would be succeded by his son, [[Henry VIII]] [[(Britannica)|Bibliography]].
+(text-colour:orange)[(if:$Points &gt; 0)[(set: $Points to it + 1)[Congrats you&#39;ve gained another point!!! You currently have $Points points!!!]]
+(if:$Points &lt; 1)[(set: $Points to it + 1)[Here&#39;s your first point for meeting your first Tudor monarch. Congrats!!! You currently have $Points point!!!]]]
 
 &lt;a href=&quot;https://imgflip.com/i/9bhf5s&quot;&gt;&lt;img src=&quot;https://i.imgflip.com/9bhf5s.jpg&quot;/&gt;&lt;/a&gt;
 
-</tw-passagedata><tw-passagedata pid="3" name="Henry VIII" tags="" position="800,400" size="100,100">King Henry VIII was born on June 28, 1491 in Greenwich, England. His reign lasted from  April 22, 1509 until his death on January 28, 1547.
+</tw-passagedata><tw-passagedata pid="3" name="Henry VIII" tags="" position="800,400" size="100,100">(text-colour:cyan)[(text-colour:cyan)[King Henry VIII was born on June 28, 1491 in Greenwich, England. His reign lasted from  April 22, 1509 until his death on January 28, 1547.
 
-He was known for his six marriages (yes, six.) which included [[Catherine of Aragon]], [[Anne Boleyn]], [[Jane Seymour]], [[Anne of Cleves]], [[Catherine Howard]], and [[Catherine Parr]]. He married six times to produce a male heir to the throne which wouldn&#39;t happen for him until his son [[Edward VI]] was born. His other children were 
+(after:2s)[He was known for his six marriages (yes, six.) which included [[Catherine of Aragon]], [[Anne Boleyn]], [[Jane Seymour]], [[Anne of Cleves]], [[Catherine Howard]], and [[Catherine Parr]]. He married six times to produce a male heir to the throne which wouldn&#39;t happen for him until his son [[Edward VI]] was born. His other children were [[Mary I]] and [[Elizabeth I]] . ]
 
-He was also known for starting the Church of England and broke away from the catholic church as the pope denied him the opportunity to annul his marriage with [[Catherine of Aragon]]. [[(Britannica)|Bibliography]]
+(after:4s)[He was also known for starting the Church of England and broke away from the catholic church as the pope denied him the opportunity to annul his marriage with [[Catherine of Aragon]]. [[(Britannica)|Bibliography]]]]
 
+(text-colour:cyan)[Who is your favorite out of Henry&#39;s six wives?] (dropdown:bind $name3, &quot;Catherine Parr&quot;, &quot;Jane Seymour&quot;, &quot;Anne Boleyn&quot;, &quot;Anne of Cleves&quot;, &quot;Catherine Parr&quot;,&quot;Catherine Howard&quot; )
+]
+(text-colour:cyan)[(if:$Points &gt; 0)[(set: $Points to it + 1)[Congrats you&#39;ve gained another point!!! You currently have $Points points!!!]]
+(if:$Points &lt; 1)[(set: $Points to it + 1)[Here&#39;s your first point for meeting your first Tudor monarch. Congrats!!! You currently have $Points point!!!]]]
 
 &lt;a href=&quot;https://imgflip.com/i/9bhf9f&quot;&gt;&lt;img src=&quot;https://i.imgflip.com/9bhf9f.jpg&quot;/&gt;&lt;/a&gt;
+</tw-passagedata><tw-passagedata pid="4" name="Edward VI" tags="" position="550,400" size="100,100">(text-colour:green)[King Edward VI was born on October 12, 1537 in London, England. He is the only son of [[Henry VIII]] and was the son of his third wife [[Jane Seymour]] who unfortunately died 12 days after giving birth to him (WOW). 
 
-</tw-passagedata><tw-passagedata pid="4" name="Edward VI" tags="" position="550,400" size="100,100">King Edward VI was born on October 12, 1537 in London, England. He is the only son of [[Henry VIII]] and was the son of his third wife [[Jane Seymour]] who unfortunately died 12 days after giving birth to him (WOW). 
+(after:3s)[He is most known for his age when he came into power, ONLY BEING 9 YEARS OLD!!! 
 
-He is most known for his age when he came into power, ONLY BEING 9 YEARS OLD!!! 
+He would remain King of England until his death on July 6, 1553, he was also known for excluding his half-sisters [[Mary I]] and [[Elizabeth I]] from the throne after his death due to their Catholic values. [[(Britannica)|Bibliography]]]]
 
-He would remain King of England until his death on July 6, 1553, he was also known for excluding his half-sisters [[Mary I]] and [[Elizabeth I]] from the throne after his death due to their Catholic values. [[(Britannica)|Bibliography]]
+
+(text-colour:green)[How old was Edward VI when he became king? ](dropdown:bind $name3, &quot;8&quot;, &quot;9&quot;, &quot;10&quot;, &quot;11&quot; )
+
+(text-colour:green)[(if:$Points &gt; 0)[(set: $Points to it + 1)[Congrats you&#39;ve gained another point!!! You currently have $Points points!!!]]
+(if:$Points &lt; 1)[(set: $Points to it + 1)[Here&#39;s your first point for meeting your first Tudor monarch. Congrats!!! You currently have $Points point!!!]]]
 
 &lt;a href=&quot;https://imgflip.com/i/9bhf01&quot;&gt;&lt;img src=&quot;https://i.imgflip.com/9bhf01.jpg&quot;/&gt;&lt;/a&gt;
 
-</tw-passagedata><tw-passagedata pid="5" name="Jane Grey" tags="" position="675,525" size="100,100">Lady Jane Grey also known as the &quot;Nine Days Queen&quot; was born on October 1937 in Bradgate, Leicestershire, England. She was the great-grandaughter of [[Henry VII]] and was known for being very smart from a young age as she was able to write in Greek and Italian at a young age was able to speak French, Hebrew, and Italian. 
+</tw-passagedata><tw-passagedata pid="5" name="Jane Grey" tags="" position="675,525" size="100,100">(text-colour:magenta)[Lady Jane Grey also known as the &quot;Nine Days Queen&quot; was born on October 1937 in Bradgate, Leicestershire, England. She was the great-grandaughter of [[Henry VII]] and was known for being very smart from a young age as she was able to write in Greek and Italian at a young age was able to speak French, Hebrew, and Italian. 
 
-Due to the reformation and her Protestant beliefs, Only 4 days after the Death of [[Edward VI]], At only 15 YEARS OLD, she would become queen of England. 
+(after:2s)[Due to the reformation and her Protestant beliefs, Only 4 days after the Death of [[Edward VI]], At only 15 YEARS OLD, she would become queen of England. ]
 
-Unfortunately many people (inclusing the Parliament) beileved that the title of Queen should&#39;ve went to Edward&#39;s Half Sister [[Mary I]] and decided to overthrow her reign only 9 days in. Lady Jane and her husband would unfortunately be executed on February 12, 1554. [[(Britannica)|Bibliography]]
+(after:3s)[Unfortunately many people (inclusing the Parliament) beileved that the title of Queen should&#39;ve went to Edward&#39;s Half Sister [[Mary I]] and decided to overthrow her reign only 9 days in. Lady Jane and her husband would unfortunately be executed on February 12, 1554. [[(Britannica)|Bibliography]]
+]]
+(text-colour:magenta)[(if:$Points &gt; 0)[(set: $Points to it + 1)[Congrats you&#39;ve gained another point!!! You currently have $Points points!!!]]
+(if:$Points &lt; 1)[(set: $Points to it + 1)[Here&#39;s your first point for meeting your first Tudor monarch. Congrats!!! You currently have $Points point!!!]]]
 
 &lt;a href=&quot;https://imgflip.com/i/9bhfhy&quot;&gt;&lt;img src=&quot;https://i.imgflip.com/9bhfhy.jpg&quot;/&gt;&lt;/a&gt;
-</tw-passagedata><tw-passagedata pid="6" name="Mary I" tags="" position="800,525" size="100,100">Mary I, also known as &quot;Bloody Mary&quot; was born on February 18, 1516 in Greenwich Palace, and was the daughter of [[Henry VIII]] and [[Catherine of Aragon]], and was the half-sister of [[Elizabeth I]]. She was known for being the first female monarch in the history of England. Her reign as Queen of England was from July 1553 until her death, on November 17, 1558.
+</tw-passagedata><tw-passagedata pid="6" name="Mary I" tags="" position="800,525" size="100,100">(text-colour:red)[Mary I, also known as &quot;Bloody Mary&quot; was born on February 18, 1516 in Greenwich Palace, and was the daughter of [[Henry VIII]] and [[Catherine of Aragon]], and was the half-sister of [[Elizabeth I]]. She was known for being the first female monarch in the history of England. Her reign as Queen of England was from July 1553 until her death, on November 17, 1558.
 
-She was also known for being extremely Catholic and made it her mission to bring Catholic faith back to the country of England, she would be given the nickname of &quot;Bloody Mary&quot; (never knew thats where that came from) from the Protestants due to her prosecution and executions of Protestants to restore Catholicism.  [[(Britannica; TudorHistory.org; McIlvenna, U)|Bibliography]]
+(after:3s)[She was also known for being extremely Catholic and made it her mission to bring Catholic faith back to the country of England, she would be given the nickname of &quot;Bloody Mary&quot; (never knew thats where that came from) from the Protestants due to her prosecution and executions of Protestants to restore Catholicism.  [[(Britannica; TudorHistory.org; McIlvenna, U)|Bibliography]]]]
+
+(text-colour:red)[(if:$Points &gt; 0)[(set: $Points to it + 1)[Congrats you&#39;ve gained another point!!! You currently have $Points points!!!]]
+(if:$Points &lt; 1)[(set: $Points to it + 1)[Here&#39;s your first point for meeting your first Tudor monarch. Congrats!!! You currently have $Points point!!!]]]
 
 &lt;a href=&quot;https://imgflip.com/i/9bhen7&quot;&gt;&lt;img src=&quot;https://i.imgflip.com/9bhen7.jpg&quot;/&gt;&lt;/a&gt;
-</tw-passagedata><tw-passagedata pid="7" name="Bibliography" tags="" position="675,650" size="100,100">Encyclopædia Britannica. (n.d.). Edward VI. In Britannica.com. Retrieved November 23, 2024, from https://www.britannica.com/biography/Edward-VI
+</tw-passagedata><tw-passagedata pid="7" name="Bibliography" tags="" position="675,650" size="100,100">(enchant:?page,(text-colour:red)+(bg:white))Encyclopædia Britannica. (n.d.). Edward VI. In Britannica.com. Retrieved November 23, 2024, from https://www.britannica.com/biography/Edward-VI
 
 Encyclopædia Britannica. (n.d.). Elizabeth I: Accession. In Britannica.com. Retrieved November 23, 2024, from https://www.britannica.com/biography/Elizabeth-I/Accession
 
@@ -80,37 +102,44 @@ Encyclopædia Britannica. (n.d.). Catherine Parr. In Britannica.com. Retrieved N
 
 Encyclopædia Britannica. (n.d.). Jane Seymour. In Britannica.com. Retrieved November 23, 2024, from https://www.britannica.com/biography/Jane-Seymour
 
-Encyclopædia Britannica. (n.d.). Catherine Howard. In Britannica.com. Retrieved November 23, 2024, from https://www.britannica.com/biography/Catherine-Howard</tw-passagedata><tw-passagedata pid="8" name="Elizabeth of York" tags="" position="800,650" size="100,100">Elizabeth of York was born on February 11, 1466 in Westminster Palace, England.
+Encyclopædia Britannica. (n.d.). Catherine Howard. In Britannica.com. Retrieved November 23, 2024, from https://www.britannica.com/biography/Catherine-Howard
 
-She is most known for being the wife of [[Henry VII]] and the mother of [[Henry VIII]]. Her marriage to Henry VII as it resposnible for uniting the two houses of Lancaster and York. [[(TudorHistory.org)|Bibliography]]</tw-passagedata><tw-passagedata pid="9" name="Elizabeth I" tags="" position="550,525" size="100,100">Queen Elizabeth I was born on September 7, 1533 in Greenwich, England. Her reign lasted from November 17, 1558 until her death on March 24, 1603. She is the daughter of [[Henry VIII]] and [[Anne Boleyn]], and was also the half-sister of [[Edward VI]] and [[Mary I]].
+Encyclopædia Britannica. (n.d.). Edward IV. In Britannica.com. Retrieved November 23, 2024, from https://www.britannica.com/biography/Edward-IV-king-of-England</tw-passagedata><tw-passagedata pid="8" name="Elizabeth of York" tags="" position="800,650" size="100,100">(text-colour:yellow)[Elizabeth of York was born on February 11, 1466 in Westminster Palace, England.
 
-Elizabeth would have a 45 YEAR REIGN (absolutely insane, this reign was given its own name and would be called &quot;Elizabethan Age&quot;. 
+She is most known for being the wife of [[Henry VII]] and the mother of [[Henry VIII]]. Her marriage to Henry VII as it resposnible for uniting the two houses of Lancaster and York. [[(TudorHistory.org)|Bibliography]]]</tw-passagedata><tw-passagedata pid="9" name="Elizabeth I" tags="" position="550,525" size="100,100">(enchant:?page,(bg:white))(text-colour:#ff6bff)[Queen Elizabeth I was born on September 7, 1533 in Greenwich, England. Her reign lasted from November 17, 1558 until her death on March 24, 1603. She is the daughter of [[Henry VIII]] and [[Anne Boleyn]], and was also the half-sister of [[Edward VI]] and [[Mary I]].
 
-She is also known as the last monarch of the Tudor era as after her death, she had no heir to succeed her, so King James VI of Scotland would become King of England and would start the Stuart dynasty [[(Britannica)|Bibliography]].
+(after:2s)[Elizabeth would have a 45 YEAR REIGN (absolutely insane, this reign was given its own name and would be called &quot;Elizabethan Age&quot;. ]
+
+(after:4s)[She is also known as the last monarch of the Tudor era as after her death, she had no heir to succeed her, so King James VI of Scotland would become King of England and would start the Stuart dynasty [[(Britannica)|Bibliography]].]]
+
+(text-colour:#ff6bff)[How many years was Elizabeth I queen of England? (dropdown:bind $name3, &quot;9&quot;, &quot;15&quot;, &quot;30&quot;, &quot;45&quot;)]
+
+(text-colour:#ff6bff)[(if:$Points &gt; 0)[(set: $Points to it + 1)[Congrats you&#39;ve gained another point!!! You currently have $Points points!!!]]
+(if:$Points &lt; 1)[(set: $Points to it + 1)[Here&#39;s your first point for meeting your first Tudor monarch. Congrats!!! You currently have $Points point!!!]]]
 
 &lt;a href=&quot;https://imgflip.com/i/9bhfdo&quot;&gt;&lt;img src=&quot;https://i.imgflip.com/9bhfdo.jpg&quot;/&gt;&lt;/a&gt;
 
-</tw-passagedata><tw-passagedata pid="10" name="Catherine of Aragon" tags="" position="925,525" size="100,100">Catherine of Aragon was born on December 16, 1485 in Alcalá de Henares, Spain. She was the daughter of Spanish King Ferdinand II and Spanish Queen Isabella I. She would eventually become [[Henry VIII]] first wife and the mother of [[Mary I]]
+</tw-passagedata><tw-passagedata pid="10" name="Catherine of Aragon" tags="" position="925,525" size="100,100">(text-colour:blue)[Catherine of Aragon was born on December 16, 1485 in Alcalá de Henares, Spain. She was the daughter of Spanish King Ferdinand II and Spanish Queen Isabella I. She would eventually become [[Henry VIII]] first wife and the mother of [[Mary I]]
 
 Henry would eventually separate from Catherine after he demanded an annulment of their marriage due to the lack of a male heir, which led him to separating from the catholic church. 
-
+]
 </tw-passagedata><tw-passagedata pid="11" name="Anne Boleyn" tags="" position="925,650" size="100,100">Anne Boleyn was the second wife of [[Henry VIII]] and mother of [[Elizabeth I]]. She married Henry VIII after the annulment of [[Catherine of Aragon]]and would become secretly married in 1533.
 
 Anne&#39;s time as queen was controversial as she was known to have a arrogant attutude towards the court and after being unable to give Henry a male heir, she was accused of adultery and incest (whom many believe was fabricated) which led to her being sent to the Tower of London by Henry where she would be executed on May 19, 1536.
 </tw-passagedata><tw-passagedata pid="12" name="Jane Seymour" tags="" position="800,775" size="100,100">Jane Seymour was born sometime in 1509 in England. She was the third wife of [[Henry VIII]] and the mother of [[Edward VI]].
 
 Unlike any other of Henry&#39;s previous wives, she was able to finally give him a male heir, but would unfortunately pass away only 12 days after. [[(Britannica)|Bibliography]]
-</tw-passagedata><tw-passagedata pid="13" name="Anne of Cleves" tags="" position="925,775" size="100,100">Anne of Cleves was the fourth wife of [[Henry VIII]] and was born on September 22, 1515. Her marriage with Henry VIII started due to the political alliance between Henry and Anne&#39;s brother, William, duke of Cleves as the potential of a war against France and the Holy Roman Empire due to rising tensions between the Catholics and Protestants. 
+(enchant:?page,(bg:grey))Your Text Here</tw-passagedata><tw-passagedata pid="13" name="Anne of Cleves" tags="" position="925,775" size="100,100">(text-colour:red)[(enchant:?page,(text-colour:red)+(bg:navy))Anne of Cleves was the fourth wife of [[Henry VIII]] and was born on September 22, 1515. Her marriage with Henry VIII started due to the political alliance between Henry and Anne&#39;s brother, William, duke of Cleves as the potential of a war against France and the Holy Roman Empire due to rising tensions between the Catholics and Protestants. 
 
-She would get married to Henry on January 6th, 1540 and would stay married until their marriage would be annulled on July 9th, 1540.[[(Britannica)|Bibliography]]
+She would get married to Henry on January 6th, 1540 and would stay married until their marriage would be annulled on July 9th, 1540.[[(Britannica)|Bibliography]]]
 
-</tw-passagedata><tw-passagedata pid="14" name="Catherine Howard" tags="" position="675,775" size="100,100">Catherine Howard was [[Henry VIII]] fifth wife and was born sometime in 1523 in Lambeth, London; she was the cousin of Henry&#39;s second wife [[Anne Boleyn]]. 
+</tw-passagedata><tw-passagedata pid="14" name="Catherine Howard" tags="" position="675,775" size="100,100">(text-colour:#f0f)[(enchant:?page,(text-colour:#f0f)+(bg:purple))Catherine Howard was [[Henry VIII]] fifth wife and was born sometime in 1523 in Lambeth, London; she was the cousin of Henry&#39;s second wife [[Anne Boleyn]]. 
 
 She would marry Catherine only 19 days after the annulment of Henry&#39;s and [[Anne of Cleves]]. Catherine would remain married to Henry until she would be charged with treason after Henry learned of past affairs she had and would be executed On February 13, 1542. [[(Britannica)|Bibliography]]
-</tw-passagedata><tw-passagedata pid="15" name="Catherine Parr" tags="" position="800,900" size="100,100">Catherine Parr was the sixth and final wife of [[Henry VIII]] and was born at sometime in 1512 and would marry Henry on July 12, 1543.
+]</tw-passagedata><tw-passagedata pid="15" name="Catherine Parr" tags="" position="800,900" size="100,100">(enchant:?page,(text-colour:black)+(bg:yellow))Catherine Parr was the sixth and final wife of [[Henry VIII]] and was born at sometime in 1512 and would marry Henry on July 12, 1543.
 
 She was known for being very friendly and Protestant, she would stay by Henry&#39;s side until Henry&#39;s death in 1947. 
-</tw-passagedata></tw-storydata>
+</tw-passagedata><tw-passagedata pid="16" name="King Edward IV" tags="" position="550,650" size="100,100">King Edward IV was the father of [[Elizabeth of York]] and was the King of England during the War of the Roses as he was apart of the house of York. He was born on April 28, 1442 in Rouen, France. The marriage Elizabeth of York and [[Henry VII]] would be a major point in Tudor history as it would lead to the houses of York and Lancaster to unite. [[(Britannica)|Bibliography]].</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
